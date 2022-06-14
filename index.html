@@ -6,13 +6,11 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/popper.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/sweetalert2.min.css">
-
     <title>Desafio Entrega - German Marr</title>
+
 </head>
 
 <body>
@@ -45,8 +43,7 @@
                                     </table>
 
                                     <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
-                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">
-                                        Compra</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Compra</a>
                                 </div>
                             </li>
                         </ul>
@@ -81,7 +78,8 @@
                             <li>Color Plateada</li>
 
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                        <a href="" id="btnSweet" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="1">Comprar</a>
                     </div>
                 </div>
 
@@ -99,7 +97,8 @@
                             <li>COLOR Original</li>
 
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                        <a href="" id="btnSweetDos" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="2">Comprar</a>
                     </div>
                 </div>
 
@@ -117,7 +116,8 @@
                             <li>COLOR de fabrica</li>
                             <li> Ultimos modelos</li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                        <a href="" id="btnSweetTres" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="3">Comprar</a>
                     </div>
                 </div>
 
@@ -136,7 +136,8 @@
                         <ul class="list-unstyled mt-3 mb-4">
                             <li></li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
+                        <a href="" id="btnSweetCuatro" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="4">Comprar</a>
                     </div>
                 </div>
 
@@ -153,7 +154,8 @@
                             <li>Color Blanco,clasico</li>
                             <li>Epoca del 90</li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
+                        <a href="" id="btnSweetCinco" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="5">Comprar</a>
                     </div>
                 </div>
 
@@ -170,7 +172,8 @@
                             <li></li><br>
                             <li>Color Negro </li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
+                        <a href="" id="btnSweetSeis" class="btn btn-block btn-primary agregar-carrito"
+                            data-id="6">Comprar</a>
                     </div>
                 </div>
 
@@ -179,13 +182,16 @@
 
         </div>
     </main>
-
+    <!--Scripts-->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
     <script src="js/carrito.js"></script>
     <script src="js/pedido.js"></script>
-
+    <script src="js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--CDN de Luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
 </body>
 
 </html>

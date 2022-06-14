@@ -73,5 +73,130 @@ return instrumLocalStorage;
 }
 }
 
+//Mensajes de liberarias...
 
- 
+iniciarMensaje();
+const luxonDateTime = luxon.DateTime;
+function iniciarMensaje()
+{
+  saludarCompra();
+  vaciarCarritoMensaje();
+  // creandoLuxonTime();
+  procesarCompraLibreria();
+
+}
+
+//Funcion que ofrece mensaje de aviso de compra
+function saludarCompra(){
+const  btn = document.querySelector('#btnSweet');
+const  btnDos = document.querySelector('#btnSweetDos');
+const  btnTres = document.querySelector('#btnSweetTres');
+const  btnCuatro = document.querySelector('#btnSweetCuatro');
+const btnCinco = document.querySelector('#btnSweetCinco');
+const btnSeis = document.querySelector('#btnSweetSeis');
+btn.addEventListener('click', () =>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra.",
+    icon:'sucess'
+}
+)
+})
+btnDos.addEventListener('click',()=>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra"
+})
+})
+btnTres.addEventListener('click',()=>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra"
+})
+})
+btnCuatro.addEventListener('click',()=>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra"
+})
+})
+btnCinco.addEventListener('click',()=>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra"
+})
+})
+btnSeis.addEventListener('click',()=>
+{
+  Swal.fire({
+    text:"Has seleccionado este instrumento, observa tu carrito de compra"
+})
+})
+
+
+
+
+
+
+}
+
+//Funcion que ofrece mensaje de libreria vacia.
+function vaciarCarritoMensaje()
+{
+  const btn = document.querySelector("#vaciar-carrito")
+  btn.addEventListener('click',()=>{
+    Swal.fire({
+      title:"Esta seguro de vaciar carrito?",
+      icon:'warning',
+      showCancelButton:true,
+      confirmButtonText:'Si de acuerdo',
+      cancelButtonText:'No,cancelar'
+    }).then ((result) =>{
+      if(result.isConfirmed)
+      {
+        Swal.fire({
+          title:"Borrado",
+          icon:'success',
+          text:'El carrito se ha vaciado'
+        })
+      }}
+    )})}
+function procesarCompraLibreria()
+{
+  const btnDos = document.querySelector("#procesar-pedido")
+  btnDos.addEventListener('click',()=>{
+    Swal.fire({
+      title:"Esta seguro de realizar la compra?",
+      icon:'warning',
+      showCancelButton:true,
+      confirmButtonText:'Si de acuerdo',
+      cancelButtonText:'No,cancelar'
+    }).then ((result) =>{
+      if(result.isConfirmed)
+      {
+        Swal.fire({
+          title:"Completado",
+          icon:'success',
+          text:'Se ha comprado su producto'
+        })
+      }}
+    )})
+}
+// Fecha en construccion
+let dtFormat = new Intl.DateTimeFormat('en-US',{
+  day:'2-digit',
+  mont:'short',
+  year:'numeric'
+});
+let date = new Date();
+console.log(dtFormat.format(date));
+
+
+// function creandoLuxonTime()
+// {
+//   const dateTi = luxonDateTime.fromObject(
+//     {day: 12, month:3, year:2022},
+//     {zone: 'America/Montevideo'}
+//   );
+//   console.log(dateTi);
+// }
