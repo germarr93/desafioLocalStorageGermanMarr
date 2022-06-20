@@ -76,14 +76,14 @@ return instrumLocalStorage;
 //Mensajes de liberarias...
 
 iniciarMensaje();
-const luxonDateTime = luxon.DateTime;
+
 function iniciarMensaje()
 {
   saludarCompra();
   vaciarCarritoMensaje();
-  // creandoLuxonTime();
   procesarCompraLibreria();
-
+  miCuenta();
+  miCuentaDos()
 }
 
 //Funcion que ofrece mensaje de aviso de compra
@@ -191,12 +191,40 @@ let dtFormat = new Intl.DateTimeFormat('en-US',{
 let date = new Date();
 console.log(dtFormat.format(date));
 
+//FETCH
 
-// function creandoLuxonTime()
-// {
-//   const dateTi = luxonDateTime.fromObject(
-//     {day: 12, month:3, year:2022},
-//     {zone: 'America/Montevideo'}
-//   );
-//   console.log(dateTi);
-// }
+function miCuenta()
+{ 
+ const btn = document.getElementById('comprar-iphone');
+ btn.addEventListener("click",()=>
+ {
+   miCuentaGitHub();
+ })
+ 
+}
+
+
+
+function miCuentaGitHub()
+{
+fetch('https://api.github.com/users/germarr93')
+.then(response => response.json())
+.then(data => {
+  console.log(data)
+})
+.catch(error => console.error(error))
+}
+
+function miCuentaDos()
+{
+fetch('https://api.github.com/users/germarr93', { 
+                 headers: {
+                      'Accept' : 'application/vnd.github.v3+json'
+                  }})
+		.then(response => response.json()) //Converting the response to a JSON object
+		.then( data => {
+                    const root = document.querySelector('comprar-iphone');
+                   
+                })
+		.catch( error => console.error(error));
+              }
