@@ -83,7 +83,6 @@ function iniciarMensaje()
   vaciarCarritoMensaje();
   procesarCompraLibreria();
   miCuenta();
-  miCuentaDos()
 }
 
 //Funcion que ofrece mensaje de aviso de compra
@@ -215,16 +214,3 @@ fetch('https://api.github.com/users/germarr93')
 .catch(error => console.error(error))
 }
 
-function miCuentaDos()
-{
-fetch('https://api.github.com/users/germarr93', { 
-                 headers: {
-                      'Accept' : 'application/vnd.github.v3+json'
-                  }})
-		.then(response => response.json()) //Converting the response to a JSON object
-		.then( data => {
-                    const root = document.querySelector('comprar-iphone');
-                   
-                })
-		.catch( error => console.error(error));
-              }
