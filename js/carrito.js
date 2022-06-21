@@ -80,8 +80,7 @@ function iniciarFunciones()
   vaciarCarritoMensaje();
   procesarCompraLibreria();
   miCuenta();
-  
-  getUserAsync()
+
 }
 
 //Funcion que ofrece mensaje de aviso de compra
@@ -190,6 +189,7 @@ function miCuenta()
  })
  
 }
+//Probar haciendo click en boton.
 function miCuentaGitHub()
 {
 fetch('https://api.github.com/users/germarr93')
@@ -201,15 +201,17 @@ fetch('https://api.github.com/users/germarr93')
 }
 
 
- async function getUserAsync() {
- await fetch(`https://api.github.com/users/germarr93`)
- .then(function(response)
- {
-  return response.json()
- })
-  .then(function(response)
-  {
-    console.log(response)
-  })
 
-}
+//#FETCH ASYNC (Probar por Consola descomentando la anterior)
+
+
+//  async function gitHubAsync () {
+
+//   let response = await fetch('https://api.github.com/users/germarr93')
+//   return response.json()
+
+//  }
+//  gitHubAsync()
+//  .then(jsonData=> console.log(jsonData))
+ 
+
