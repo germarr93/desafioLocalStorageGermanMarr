@@ -20,8 +20,6 @@ leerInstrumento(instrumento)
   }
   this.agregarCarrito(infoInstrumento);
 }
-
-
 agregarCarrito(instrumento)
 {
   const row = document.createElement('tr');
@@ -48,7 +46,6 @@ while(listaInstrumentos.firstChild)
 }
 return false;
 }
-
 guardarInstrumentoLocalStorage(instrumento)
 {
   let instrumentos;
@@ -73,16 +70,18 @@ return instrumLocalStorage;
 }
 }
 
-//Mensajes de liberarias...
+//Iniciar las funciones...
 
-iniciarMensaje();
+iniciarFunciones();
 
-function iniciarMensaje()
+function iniciarFunciones()
 {
   saludarCompra();
   vaciarCarritoMensaje();
   procesarCompraLibreria();
   miCuenta();
+  
+  getUserAsync()
 }
 
 //Funcion que ofrece mensaje de aviso de compra
@@ -181,17 +180,7 @@ function procesarCompraLibreria()
       }}
     )})
 }
-// Fecha en construccion
-let dtFormat = new Intl.DateTimeFormat('en-US',{
-  day:'2-digit',
-  mont:'short',
-  year:'numeric'
-});
-let date = new Date();
-console.log(dtFormat.format(date));
-
-//FETCH
-
+// Aplicacion de FETCH
 function miCuenta()
 { 
  const btn = document.getElementById('comprar-iphone');
@@ -201,9 +190,6 @@ function miCuenta()
  })
  
 }
-
-
-
 function miCuentaGitHub()
 {
 fetch('https://api.github.com/users/germarr93')
@@ -214,3 +200,16 @@ fetch('https://api.github.com/users/germarr93')
 .catch(error => console.error(error))
 }
 
+
+ async function getUserAsync() {
+ await fetch(`https://api.github.com/users/germarr93`)
+ .then(function(response)
+ {
+  return response.json()
+ })
+  .then(function(response)
+  {
+    console.log(response)
+  })
+
+}
